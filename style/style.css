@@ -46,9 +46,16 @@ li{
 }
 .up-text{
     text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
 }
 .text-color{
     color: var(--grey-text);
+}
+.btn{
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: 1px solid var(--white);
 }
 /* main */
 main{
@@ -83,8 +90,6 @@ main{
 }
 .content-main li{
     padding: 15px;
-    font-size: 0.7rem;
-    font-weight: 600;
 }
 .container{
     padding: 15px;
@@ -116,3 +121,18 @@ main{
     font-size: 0.7rem;
     color: var(--grey-text);
 } 
+
+/* responsive */
+@media screen and (max-width: 878px) {
+    .card{
+        width: calc(100% / 4);
+    }
+    ul, .row{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 639px) {
+    .card{
+        width: calc(100% / 2);
+    }
+}
