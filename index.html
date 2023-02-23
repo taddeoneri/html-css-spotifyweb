@@ -16,7 +16,9 @@
         <main class="d-flex">
             <nav class="nav-main">
                 <div class="content-nav">
-                    <img src="./img/logo.svg" alt="Logo">
+                    <div class="logo">
+                        <img src="./img/logo.svg" alt="Logo">
+                    </div>
                     <img class="nav-img" src="./img/logo-small.svg" alt="Logo small">
                     <ul class="top-list">
                         <li>
@@ -151,8 +153,32 @@
                 </div>
             </section>
         </main>
-        <div class="play">
+        <div class="play d-flex flex-between align-center">
+            <div class="play-album d-flex flex-between align-center">
+                <span class="d-flex align-center">
+                    <img src="./img/sinister.jpeg" alt="Sinister Playbar">
+                    <span>
+                        <h4 class="text-small">Sinister</h4>
+                        <p>Brano Nome</p>
+                    </span>  
+                </span>
+                <span>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </span>
+            </div>
+            <div class="playbar">
+                <ul class="icon d-flex flex-center align-center">
+                    <li><a href="#"><i class="fa-solid fa-shuffle"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-backward-step"></i></a></li>
+                    <li><div class="play-circle d-flex flex-center align-center"><a href="#"><i class="fa-sharp fa-regular fa-circle-play"></i></a></div></li>
+                    <li><a href="#"><i class="fa-solid fa-forward-step"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-rotate-right"></i></a</li>
+                </ul>
+            </div>
+            <div class="play-audio">
 
+            </div>
         </div>
     </div>
 </body>

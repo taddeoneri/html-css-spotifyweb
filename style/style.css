@@ -41,6 +41,9 @@ a{
 .flex-center{
     justify-content: center;
 }
+.flex-between{
+    justify-content: space-between;
+}
 li{
     list-style: none;
 }
@@ -78,11 +81,6 @@ main{
     background-color: var(--bg-content);
     height: 100%;
     overflow-y: auto;
-}
-.play{
-    height: 80px;
-    width: 100%;
-    background-color: var(--bg-play);
 }
 .call-to-action{
     position: fixed;
@@ -129,14 +127,15 @@ main{
 .content-nav{
     width: 100%;
     height: calc(100% - 80px);
-    border: 1px solid white;
 }
 .bottom-nav{
     width: 100%;
     height: 80px;
+    padding: 10px 0px;
 } 
-.nav-main img{
-    width: 60%;
+.logo img{
+    width: 68%;
+    padding: 15px;
 }
 .nav-img{
     display: none;
@@ -151,18 +150,27 @@ main{
 .top-list a:hover{
     border-left: 3px solid var(--white);
 }
-.playlist h3, .playlist li{
+.playlist h3{
+    padding-top: 15px;
+    color: var(--white);
+}
+.content-nav li{
     padding-top: 8px;
     color: var(--white);
+}
+.playlist li{
+    padding-top: 15px;
 }
 .top-img img{
     width: 12px;
 }
-.top-img{
-    border-bottom: 1px solid var(--grey-text);
-}
-.top-img, .bottom-img{
-    padding:10px 0px;
+.top-img::after{
+    content: '';
+    display: block;
+    width: 80%;
+    margin: 12px auto;
+    height: 1px;
+    background-color: var(--grey-text);
 }
 .bottom-img img{
     width: 25px;
@@ -174,6 +182,54 @@ main{
     width: 25px;
     height: 25px;
     overflow: hidden;
+}
+.bottom-nav span{
+    padding-left: 8px;
+}
+.content-nav a img{
+    padding-right: 5px;
+}
+.play{
+    height: 80px;
+    width: 100%;
+    background-color: var(--bg-play);
+}
+.play-album, .play-audio{
+    width: 220px;
+    height: 100%;
+    padding: 10px;
+}
+.playbar{
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+}
+.play-album img{
+    width: 40px;
+}
+.play-album h4{
+    color: var(--white);
+}
+.play-album p{
+    color: var(--grey-text);
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+.play-album p, .play-album h4, .play-album i:last-child{
+    padding-left: 10px;
+}
+.icon i{
+    padding: 0px 10px;
+}
+.play-circle{
+    height: 40px;
+    width: 68px;
+}
+.play-circle i{
+    font-size: 1.9rem;
+}
+.play-circle i:hover{
+    font-size: 2.2rem;
 }
 /* responsive */
 @media screen and (max-width: 1200px) {
