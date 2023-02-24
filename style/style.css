@@ -10,7 +10,7 @@
     --bg-play: #282828;
     --bg-action: #080b12;
     --bg-content: #141922;
-    --hovergreen: #adff2f:
+    --hovergreen: #adff2f;
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -71,6 +71,9 @@ li{
     color: var(--white);
     font-weight: 600;
 }
+.nowrap{
+    flex-wrap: nowrap;
+}
 /* main */
 main{
     width: 100%;
@@ -95,6 +98,7 @@ main{
     background-color: rgba(8, 11, 18, 0.5);
     width: calc(100% - 220px);
     height: 80px;
+    z-index: 100;
 }
 .content-main{
     margin-top: 80px;
@@ -178,24 +182,35 @@ main{
     display: none;
 }
 .content-nav a img{
-    width: 28px;
+    width: 30px;
 }
 .nav-main a, .content-nav h3{
     border-left: 3px solid transparent;
     padding-left: 15px;
 }
 .top-list a:hover{
-    border-left: 3px solid var(--white);
+    border-left: 3px solid var(--hovergreen);
 }
 .playlist{
-    height: 60%;
+    height: 75%;
     overflow-y: auto;
 }
-.playlist h3{
+.content-main ul a:after{
+    display: block;
+    content: '';
+    width: 40%;
+    height: 2px;
+    margin: 1px auto;
+    background-color: transparent;
+}
+.content-main nav ul li:hover a:after{
+    background-color: var(--hovergreen);
+}
+.content-nav h3{
     padding-top: 26px;
     color: var(--white);
 }
-.content-nav li{
+.content-nav a{
     padding-top: 8px;
     color: var(--white);
 }
@@ -203,7 +218,7 @@ main{
     padding-top: 15px;
 }
 .top-img img{
-    width: 12px;
+    width: 14px;
 }
 .top-img::after{
     content: '';
@@ -259,6 +274,9 @@ main{
 .play-album p, .play-album h4, .play-album i:last-child{
     padding-left: 10px;
 }
+.icon{
+    flex-wrap: nowrap;
+}
 .icon i{
     padding: 0px 10px;
 }
@@ -285,7 +303,14 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     opacity: 0;
-  }
+}
+.slider{
+    display: flex;
+    align-self: center;
+}
+.play-audio i{
+    padding-right: 10px;
+}
 /* responsive */
 @media screen and (max-width: 1200px) {
     .card{
@@ -299,11 +324,14 @@ input[type="range"]::-webkit-slider-thumb {
     .card{
         width: calc(100% / 3);
     }
-}
 @media screen and (max-width: 768px) {
     .card{
         width: calc(100% / 2);
     }
+    .play-album ul{
+        display: block;
+    }
+}
 }
 @media screen and (max-width: 576px) {
     .nav-main{
@@ -317,5 +345,24 @@ input[type="range"]::-webkit-slider-thumb {
     }
     .call-to-action{
         width: calc(100% - 60px);
+    }
+    .logo{
+        display: none;
+    }
+    .nav-img{
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+    .content-nav li span, .content-nav h3, .content-nav .playlist, .bottom-nav span{
+        display: none;
+    }
+    .top-img img{
+        margin: 0 auto;
+    }
+    .top-img a{
+        padding-left: 0px;
+        border: none;
     }
 }
