@@ -42,7 +42,7 @@
                     </ul>
                     <section class="playlist text-small">
                         <h3 class="up-text">Playlist</h3>
-                        <ul>
+                        <ul class="playlist">
                             <li><a class="text-small" href="#">Crea Playlist</a></li>
                             <li><a class="text-small" href="#">Nome Playlist</a></li>
                             <li><a class="text-small" href="#">Nome Playlist</a></li>
@@ -66,7 +66,7 @@
                             <div class="box-nav">
                                 <img src="./img/profile.svg" alt="">
                             </div>
-                            <span>John Doe</span>
+                            <h4 class="text-medium">John Doe</h4>
                         </a>
                         
                     </div>
@@ -91,32 +91,62 @@
                         <h2>Recently Played</h2>
                         <div class="row d-flex">
                             <div class="card">
-                                <img src="./img/metal_lifting.jpg" alt="Heavy Metal">
+                                <div class="cover-img">
+                                    <img src="./img/metal_lifting.jpg" alt="Heavy Metal">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">Heavy Metal</h4>
                                 <p class="text-small">Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="./img/stranger.jpeg" alt="Stranger">
+                                <div class="cover-img">
+                                    <img src="./img/stranger.jpeg" alt="Stranger">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">Stranger Things, Vol. (a Netflix Original Series Soundtrack1)</h4>
                                 <p class="text-small">Kyle Dixon & Micheal Stein</p>
                             </div>
                             <div class="card">
-                                <img src="./img/aquietplace.jpeg" alt="Quiet Place">
+                                <div class="cover-img">
+                                    <img src="./img/aquietplace.jpeg" alt="Quiet Place">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">A quiet place</h4>
                                 <p class="text-small">Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="./img/split.jpeg" alt="Split">
+                                <div class="cover-img">
+                                    <img src="./img/split.jpeg" alt="Split">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">Split</h4>
                                 <p class="text-small">Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="./img/cure.jpeg" alt="Wellness">
+                                <div class="cover-img">
+                                    <img src="./img/cure.jpeg" alt="Wellness">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">A cure of wellness</h4>
                                 <p class="text-small">Subtitle</p>
                             </div>
                             <div class="card">
-                                <img src="./img/sinister.jpeg" alt="Sinister">
+                                <div class="cover-img">
+                                    <img src="./img/sinister.jpeg" alt="Sinister">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">Sinister</h4>
                                 <p class="text-small">Subtitle</p>
                             </div>
@@ -125,11 +155,21 @@
                         <p class="p-container">Più ascolti, più saranno accurati i suggerimenti</p>
                         <div class="row d-flex">
                             <div class="card">
-                                <img src="./img/radar.jpeg" alt="Radar">
+                                <div class="cover-img">
+                                    <img src="./img/radar.jpeg" alt="Radar">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">Release Radar</h4>
                             </div>
                             <div class="card">
-                                <img src="./img/mixdaily.jpeg" alt="Daily Mix">
+                                <div class="cover-img">
+                                    <img src="./img/mixdaily.jpeg" alt="Daily Mix">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
                                 <h4 class="title-medium">Daily Mix 1</h4>
                             </div>
                         </div>
@@ -137,14 +177,20 @@
                         <p class="p-container">Più ascolti, più saranno accurati i suggerimenti</p>
                         <div class="row d-flex">
                             <div class="card">
-                                <div class="box-image">
+                                <div class="box-image cover-img">
                                     <img src="./img/youg.jpeg" alt="Lana del Rey">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
                                 </div>
                                 <h4 class="title-medium">Lana del Rey</h4>
                             </div>
                             <div class="card">
-                                <div class="box-image">
+                                <div class="box-image cover-img">
                                     <img src="./img/einaudi.jpeg" alt="Einaudi">
+                                    <div class="layover">
+                                        <i class="fa-sharp fa-regular fa-circle-play"></i>
+                                    </div>
                                 </div>
                                 <h4 class="title-medium">Ludovico Einaudi</h4>
                             </div>
@@ -177,7 +223,7 @@
                 </ul>
                 <div class="d-flex flex-between align-center">
                     <span class="text-small">0.25</span>
-                    <input type="range" min="1" max="100" value="20" class="slider1">
+                    <input type="range" min="1" max="100" value="20">
                     <span class="text-small">4.35</span>
                 </div>
             </div>

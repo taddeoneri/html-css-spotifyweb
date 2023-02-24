@@ -18,6 +18,7 @@ body{
 /* utility */
 img{
     width: 100%;
+    display: block;
 }
 .wrap{
     width: 100%;
@@ -65,6 +66,11 @@ li{
     font-size: 0.9rem;
     color: var(--white);
 }
+.text-medium{
+    font-size: 0.8rem;
+    color: var(--white);
+    font-weight: 600;
+}
 /* main */
 main{
     width: 100%;
@@ -96,6 +102,33 @@ main{
 .content-main li{
     padding: 15px;
 }
+.content-main h4{
+    padding: 12px 0px;
+}
+.layover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.layover i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cover-img{
+    position: relative;
+}
+.card:hover .layover{
+    opacity: 1;
+}
 .container{
     padding: 15px;
 }
@@ -108,6 +141,7 @@ main{
     width: calc(100% / 6);
     padding: 10px;
     text-align: center;
+    position: relative;
 }
 .box-image{
     border-radius: 50%;
@@ -127,11 +161,14 @@ main{
 .content-nav{
     width: 100%;
     height: calc(100% - 80px);
+    display: flex;
+    flex-flow: column;
 }
 .bottom-nav{
     width: 100%;
     height: 80px;
     padding: 10px 0px;
+    background-color: var(--black);
 } 
 .logo img{
     width: 68%;
@@ -150,8 +187,12 @@ main{
 .top-list a:hover{
     border-left: 3px solid var(--white);
 }
+.playlist{
+    height: 60%;
+    overflow-y: auto;
+}
 .playlist h3{
-    padding-top: 15px;
+    padding-top: 26px;
     color: var(--white);
 }
 .content-nav li{
@@ -183,7 +224,7 @@ main{
     height: 25px;
     overflow: hidden;
 }
-.bottom-nav span{
+.bottom-nav span, .bottom-nav h4{
     padding-left: 8px;
 }
 .content-nav a img{
@@ -231,16 +272,20 @@ main{
 .play-circle i:hover{
     font-size: 2.2rem;
 }
-.slider1{
-    width: 84%;
-    height: 4px;
-    background-color: var(--grey-text);
-}
-.slider1::-webkit-slider-thumb{
+input[type="range"] {
     -webkit-appearance: none;
-    appearance: none;
+    width: 86%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-size: 20% 100%;
+    background-repeat: no-repeat;
 }
-
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    opacity: 0;
+  }
 /* responsive */
 @media screen and (max-width: 1200px) {
     .card{
