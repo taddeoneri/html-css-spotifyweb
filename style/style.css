@@ -168,6 +168,9 @@ main{
     display: flex;
     flex-flow: column;
 }
+.content-main nav ul li:hover a, .nav-main ul li:hover a, .top-img:hover span{
+    color: var(--white);
+}
 .bottom-nav{
     width: 100%;
     height: 80px;
@@ -212,7 +215,6 @@ main{
 }
 .content-nav a{
     padding-top: 8px;
-    color: var(--white);
 }
 .playlist li{
     padding-top: 15px;
@@ -260,6 +262,9 @@ main{
     height: 100%;
     padding: 10px;
 }
+.playbar span{
+    color: rgba(255, 255, 255, 0.6);
+}
 .play-album img{
     width: 40px;
 }
@@ -295,8 +300,8 @@ input[type="range"] {
     width: 86%;
     height: 3px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    background-image: linear-gradient(#ffffff, #ffffff);
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
     background-size: 20% 100%;
     background-repeat: no-repeat;
 }
@@ -310,6 +315,20 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .play-audio i{
     padding-right: 10px;
+}
+.play-album a{
+    opacity: 0.3;
+    font-size: 0.9rem;
+}
+.play-audio a{
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+.play-album a:hover{
+    opacity: 1;
+}
+.play-audio a:hover{
+    opacity: 1;
 }
 /* responsive */
 @media screen and (max-width: 1200px) {
@@ -364,5 +383,10 @@ input[type="range"]::-webkit-slider-thumb {
     .top-img a{
         padding-left: 0px;
         border: none;
+    }
+}
+@media screen and (max-height: 90px) {
+    .nav-main, .section-main{
+        display: none;
     }
 }
